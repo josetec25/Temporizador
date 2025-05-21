@@ -15,14 +15,20 @@ function iniciarTemporizador() {
     if (tiempo <= 0) {
       clearInterval(intervalo);
       document.getElementById("sonido-corneta").play();
-
-      // Activar animación de sacudida
       timer.classList.add("animacion");
 
-      // Quitar la clase después de la animación para poder reutilizarla
       setTimeout(() => {
         timer.classList.remove("animacion");
       }, 700);
+
+      // Lanzar confeti
+      if (typeof confetti === "function") {
+        confetti({
+          particleCount: 200,
+          spread: 100,
+          origin: { y: 0.6 }
+        });
+      }
     }
   }, 1000);
 }
