@@ -4,6 +4,8 @@ let intervalo;
 function iniciarTemporizador() {
   tiempo = 10;
   const timer = document.getElementById("timer");
+  const sonido = document.getElementById("sonido-corneta");
+
   timer.textContent = "00:10";
   timer.classList.remove("animacion");
   clearInterval(intervalo);
@@ -14,11 +16,15 @@ function iniciarTemporizador() {
 
     if (tiempo <= 0) {
       clearInterval(intervalo);
-      document.getElementById("sonido-corneta").play().catch((error) => {
+
+      // Reinicia el audio por si ya se había reproducido
+      sonido.currentTime = 0;
+      sonido.play().catch((error) => {
         console.log("No se pudo reproducir el audio:", error);
       });
-      timer.classList.add("animacion");
 
+      // Agregar animación al temporizador
+      timer.classList.add("animacion");
       setTimeout(() => {
         timer.classList.remove("animacion");
       }, 700);
