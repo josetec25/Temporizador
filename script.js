@@ -14,7 +14,9 @@ function iniciarTemporizador() {
 
     if (tiempo <= 0) {
       clearInterval(intervalo);
-      document.getElementById("sonido-corneta").play();
+      document.getElementById("sonido-corneta").play().catch((error) => {
+        console.log("No se pudo reproducir el audio:", error);
+      });
       timer.classList.add("animacion");
 
       setTimeout(() => {
