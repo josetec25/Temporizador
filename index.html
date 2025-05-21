@@ -12,7 +12,9 @@
     <button onclick="iniciarTemporizador()">10 SEGUNDOS</button>
   </div>
 
-  <audio id="sonido-corneta" src="corneta.mp3" preload="auto"></audio>
+  <audio id="sonido-corneta" preload="auto">
+      <source src="corneta.mp3" type="audio/mpeg">
+  </audio>
 
   <!-- Librería de confeti -->
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
