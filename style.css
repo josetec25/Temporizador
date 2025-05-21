@@ -1,0 +1,38 @@
+body {
+  font-family: 'Comic Sans MS', sans-serif;
+  background: url('fondo.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  padding-top: 50px;
+  margin: 0;
+}
+
+.contenedor {
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 20px;
+  display: inline-block;
+  padding: 30px;
+}
+
+.logo {
+  font-size: 40px;
+  font-weight: bold;
+  color: #ffe600;
+  margin-bottom: 20px;
+}
+
+.temporizador {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+button {
+  font-size: 20px;
+  background-color: #e84118;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 10px;
+  cursor: pointer;
+}
